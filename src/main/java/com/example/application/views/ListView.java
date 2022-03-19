@@ -70,9 +70,15 @@ public class ListView extends VerticalLayout {
         title.setValueChangeMode(ValueChangeMode.LAZY);//wait user to stop typing, don't hit the db on every single keystroke
         title.addValueChangeListener(e -> updateList());
 
+        score.setPlaceholder("Greater than score...");
+        score.setClearButtonVisible(true);//button for clear text field
+        score.setValueChangeMode(ValueChangeMode.LAZY);//wait user to stop typing, don't hit the db on every single keystroke
+        score.addValueChangeListener(e -> updateList());
+
         Button addDvDBtn = new Button("Add DVD");
         addDvDBtn.addClickListener(e -> addDvD());
 
+        //score
         HorizontalLayout toolbar = new HorizontalLayout(title,score,addDvDBtn);
         toolbar.addClassName("toolbar");
         return toolbar;
@@ -132,7 +138,7 @@ public class ListView extends VerticalLayout {
     }
 
     private void updateList() {
-        grid.setItems(service.findAllDvDs(title.getValue()));
+        grid.setItems(service.findAllDvDs(title.getValue(),score.getValue()));
     }
 
 }

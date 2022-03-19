@@ -34,7 +34,7 @@ public class DvDServiceImpl implements DvDService{
     }
 
     @Override
-    public List<DVD> findAllDvDs(String title) {
-        return dvdDao.selectAll(title);
+    public List<DVD> findAllDvDs(String title,String score) {
+        return dvdDao.selectAll(title,score);
     }
 }

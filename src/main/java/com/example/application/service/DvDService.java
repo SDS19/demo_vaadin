@@ -11,5 +11,5 @@ public interface DvDService {
 
     void deleteDvD(DVD dvd) throws DaoException;
 
-    List<DVD> findAllDvDs(String title);
+    List<DVD> findAllDvDs(String title,String score);
 }

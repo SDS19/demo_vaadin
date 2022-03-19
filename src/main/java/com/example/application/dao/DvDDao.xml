@@ -14,7 +14,7 @@
             <if test="title!=null and title!=''">
                 title LIKE CONCAT('%',#{title},'%')
             </if>
-            <if test="score!=null and score!=''">
+            <if test="imdbScore!=null and imdbScore!=''">
                 imdbScore &gt; #{imdbScore}
             </if>
         </where>

@@ -2,6 +2,7 @@ package com.example.application.dao;
 
 import com.example.application.entity.DVD;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface DvDDao {
 
     int delete(DVD dvd);
 
-    List<DVD> selectAll(String title);
+    List<DVD> selectAll(@Param("title") String title,@Param("imdbScore") String score);
 
     int update(DVD dvd);
 }
