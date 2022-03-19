@@ -6,7 +6,7 @@ import lombok.Data;
 public class DVD {
     private String id;
     private String title;
-    private float imdbScore;
-    private int year;
-    private int runtime;
+    private String imdbScore;
+    private String year;
+    private String runtime;
 }

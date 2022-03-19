@@ -9,7 +9,7 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-@Route("")//makes the view accessible to the end user "http://localhost:8080/"
+//@Route("")//makes the view accessible to the end user "http://localhost:8080/"
 public class MainView extends VerticalLayout {//components added to MainView will be ordered vertically
 
     public MainView() {
