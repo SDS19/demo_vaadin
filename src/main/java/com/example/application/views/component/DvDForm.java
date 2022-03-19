@@ -21,6 +21,7 @@ public class DvDForm extends FormLayout {
 
     Binder<DVD> binder = new BeanValidationBinder<>(DVD.class);
 
+    TextField id = new TextField("id");
     TextField title = new TextField("Title");
     TextField imdbScore = new TextField("IMDB score");
     TextField year = new TextField("Year");

@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class DvDServiceImpl implements DvDService{
@@ -21,8 +20,12 @@ public class DvDServiceImpl implements DvDService{
             System.err.println("DVD is null!");
             return;
         }
-        dvd.setId(UUIDUtil.getUUID());
-        if (dvdDao.insert(dvd)!=1) throw new DaoException("Save DVD failed!");
+        System.out.println("++++++++++++id: "+dvd.getId());
+        if (dvd.getId() == null || dvd.getId() == "") {
+            dvd.setId(UUIDUtil.getUUID());
+            if (dvdDao.insert(dvd)!=1) throw new DaoException("Save DVD failed!");
+        } else if (dvdDao.update(dvd)!=1) throw new DaoException("Update DVD failed!");
+
     }
 
     @Override

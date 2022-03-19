@@ -13,4 +13,6 @@ public interface DvDDao {
     int delete(DVD dvd);
 
     List<DVD> selectAll(String title);
+
+    int update(DVD dvd);
 }

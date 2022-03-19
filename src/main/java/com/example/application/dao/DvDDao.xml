@@ -8,10 +8,6 @@
         INSERT INTO t_dvd VALUES(#{id},#{title},#{imdbScore},#{year},#{runtime})
     </insert>
 
-    <delete id="delete">
-        DELETE FROM t_dvd WHERE id = #{id}
-    </delete>
-
     <select id="selectAll" resultType="com.example.application.entity.DVD">
         SELECT * FROM t_dvd
         <where>
@@ -23,4 +19,29 @@
             </if>
         </where>
     </select>
+
+    <update id="update">
+        UPDATE t_dvd
+        <set>
+            <if test="title!=null">
+                title=#{title},
+            </if>
+            <if test="imdbScore!=null">
+                imdbScore=#{imdbScore},
+            </if>
+            <if test="year!=null">
+                year=#{year},
+            </if>
+            <if test="runtime!=null">
+                runtime=#{runtime}
+            </if>
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM t_dvd WHERE id = #{id}
+    </delete>
+
+
 </mapper>
