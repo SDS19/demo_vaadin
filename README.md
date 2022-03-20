@@ -11,7 +11,7 @@ You can also import the project to your IDE of choice as you would with any Mave
 
 ## Layout
 ![image](https://user-images.githubusercontent.com/46221024/159126400-4774ecfc-3fcc-40be-a623-74053d557403.png)
-
+![image](https://user-images.githubusercontent.com/46221024/159167473-3e4c499d-de81-4255-91a6-1eb97bcc50b2.png)
 
 ## Project structure
 
@@ -20,6 +20,6 @@ You can also import the project to your IDE of choice as you would with any Mave
 - `entity` package contains the entity class.
 - `dao` package contains the dao interface and mybatis mapper file.
 - `service` package contains the service interface and implementation class.
-- `utils` package contains the UUIDUtil class for set id.
+- `utils` package contains the UUIDUtil class for setting id.
 - `exception` package contains the self-defined exception.
 
